@@ -47,3 +47,17 @@ search.addEventListener('keyup', () => {
     const word = search.value.trim();
     filterTodos(word);
 });
+
+function saveList(groceryList) {
+    // Convert the list to a string format (JSON) before saving
+    localStorage.setItem('groceryList', JSON.stringify(groceryList));
+}
+
+function loadList() {
+    // Retrieve the list and convert it back to an array or object
+    let savedList = localStorage.getItem('groceryList');
+    if (savedList) {
+        return JSON.parse(savedList);
+    }
+    return []; // Return an empty array if nothing is saved
+}
