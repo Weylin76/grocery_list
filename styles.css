@@ -1,0 +1,23 @@
+body{
+    background: dodgerblue;
+  }
+  .container{
+    max-width: 400px;
+  }
+  input[type=text],
+  input[type=text]:focus{
+    color: black;
+    border: none;
+    background: white;
+    max-width: 400px;
+  }
+  .todos li{
+    background: #eee;}
+
+  .delete{
+    cursor: pointer;
+  }
+
+  .filtered{
+    display: none !important;
+  }
